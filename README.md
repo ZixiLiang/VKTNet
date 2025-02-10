@@ -19,6 +19,7 @@ Our processed dataset is derived from [wanglichenxj/Generative-Multi-View-Human-
 ```
 git clone https://github.com/ZixiLiang/VKTNet.git
 conda create -n VKTNet python=3.8
+conda activate VKTNet
 ```
 
 ### 2. Download [Pytorch](https://pytorch.org/get-started/previous-versions/)(1.13+)
