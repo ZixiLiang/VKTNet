@@ -44,7 +44,7 @@ python main.py --dataset 1  --batch-size 32 --epochs 10000 --beta=0.7
 python main.py --dataset 2  --batch-size 32 --epochs 10000 --beta=0.7
 ```
 
-At the end of each epoch, the value of historical metrics is automatically saved in ```./result.txt``` to facilitate researchers in observing the model's convergence.
+At the end of each epoch, the training results is automatically saved in ```./result.txt``` to facilitate researchers in observing the model's convergence.
 
 ## Result
 
