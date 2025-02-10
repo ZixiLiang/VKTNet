@@ -416,11 +416,9 @@ if __name__ == "__main__":
 
     history = testing(0)
     for key,value in history.items():
-            historys[key] = value.item()
-    
+            historys[key].append(value.item())
 
     for epoch in range(1,args.epochs):
-        
         start = time.time()
         trainHistory = training(epoch,beta = args.beta)
         history = testing(epoch)
@@ -431,9 +429,7 @@ if __name__ == "__main__":
                     history['Total'],historys['Total'],time.time() - start))
 
         for key,value in history.items():
-            value = value.item()
-            if value > historys[key]:
-                historys[key] = value
+            historys[key].append(value.item())
 
     filename = 'result.txt'
     with open(filename,'a') as file:
@@ -442,5 +438,5 @@ if __name__ == "__main__":
         file.write("Dataset: %d\n" % (args.dataset))
         file.write("Epoch: %d\n" % (args.epochs))
         for key,value in history.items():
-            file.write(key +": %.4f" % (historys[key]) + "\n")
+            file.write(key +": %.4f" % (historys[key][-1]) + "\n")
         file.write("********************************************\n")
