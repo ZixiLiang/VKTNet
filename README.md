@@ -46,6 +46,9 @@ python main.py --dataset 2  --batch-size 32 --epochs 10000 --beta=0.7
 At the end of each epoch, the value of historical metrics is automatically saved in ```./result.txt``` to facilitate researchers in observing the model's convergence.
 
 ## Result
+
+![imgs](figs/baseline.png)
+
 Using t-SNE, the feature subspace learned by our VKTNet for different views in UCB dataset are visualized in Fig. 5. All visualization results have gone through 5000 epochs of training. The results illustrate that the cross-entropy loss based subspace learning module can better keep discriminative information against other.
 
 ![imgs](figs/result.png)
